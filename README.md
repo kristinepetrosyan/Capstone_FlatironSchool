@@ -4,9 +4,10 @@
 * [Dataset](#Dataset)
 * [Problem Statement](#Problem-Statement)
 * [Businnes Value](#Businnes-Value)
-* [Review Usefulness Prediction](#Review-Usefulness-Prediction)
+* [Hypothesis Testing](#Hypothesis-Testing)
 * [Recommendations](#Recommendations)
-* [Future work/Improvements](#Future-work-Improvements)
+* [Insights](#Insights)
+* [Conclusion/ Future work](#Conclusion/Future-work)
 
 # Hotel Booking Prediction
 <IMG SRC="https://github.com/kristinepetrosyan/Capstone_FlatironSchool/blob/main/Screen%20Shot%202020-11-02%20at%205.00.49%20PM.png">
@@ -55,7 +56,7 @@ This data set contains a single file which compares various booking information 
 
 > __Feature Description__
 
-<IMG SRC="">
+<IMG SRC="https://github.com/kristinepetrosyan/Capstone_FlatironSchool/blob/main/dataset.png">
 
 - The hotel booking dataset from a kernel in Kaggle which is originally from the article Hotel Booking Demand Datasets, written by Nuno Antonio, Ana Almeida, and Luis Nunes for Data in Brief, Volume 22, February 2019.
 
@@ -63,7 +64,8 @@ This data set contains a single file which compares various booking information 
 ## Problem Statement
 - Reservations for resorts and hotels in __Lisbon, Portugal__ are experiencing __37%__ cancellations.
 
-
+<IMG SRC="https://github.com/kristinepetrosyan/Capstone_FlatironSchool/blob/main/cancelled.png">
+ 
 ## Business Value
 > Equipped with more insightful information about __where, when, and why__ these cancellations are happening, a hotel’s revenue manager can make better informed decisions and improve overbooking strategies and cancellation policies.
 
@@ -79,15 +81,14 @@ __Questions to answer from the data:__
 - Any difference in market segments?
 - How about distribution channels?
 
-
-<IMG SRC="">
+<IMG SRC="https://github.com/kristinepetrosyan/Capstone_FlatironSchool/blob/main/map.png">
 
 ## Hypothesis Testing
 
 Hypothesis testing is a strong and very important statistical tool that enable us to test conventional knowledge using sample data. Most parametric testing assume normality, but thanks to the central limit theorem, it is possible to bypass this assumption with large enough samples. Moreover, a variation of the two sample t-test called __Welch’s t-test__ enables us to compare two sample means with unequal variances, which are the tests used to perform this study.
 
 > This test was performed to answer the following question:
-- __Does booking far in advance increases the probability of cancellation?__ 
+__Does booking far in advance increases the probability of cancellation?__ 
 
 __Lead time__ is a feature in the dataset that significantly contributes to canceled reservations. Booking a reservation 7 days or more in advance increases the probability for a canceled reservation. 
 
@@ -96,7 +97,7 @@ __Cancellation Percentage:__ 0-6 days = 2.5 % more than 30 days  85%.
 ## Recommendations
 To tackle the uncertainty arising from booking cancellations, we reviewed the data from booking information for a city hotel and a resort hotel which included information such as,  when the booking was made; length of stay; the number of adults children, and/or babies and the number of available parking spaces, among other things.  Then, I used machine learning algorithms to develop booking cancellation prediction models for the hotels. 
 
-<IMG SRC="">
+<IMG SRC="https://github.com/kristinepetrosyan/Capstone_FlatironSchool/blob/main/models.png">
 
 > __Best Model__ 
 
@@ -129,14 +130,14 @@ From our analysis, we concluded that the most useful features for prediction wer
 
 
 
-## Review Usefulness Prediction
+## Insights
 > Another key component, was to improvement the forecast accuracy. So, a time series model was built to help predict number of cancellations in the future.
 
 __SARIMAX(2,2,1)x(1, 1, 0, 52)__ yields the "lowest" __AIC value of 422.779__. Therefore, we considered this to be optimal option out of all the models we have considered and the "p-values" __(P>|z|) 0.000 < .05__.
 
 __Real vs Predicted values along with confidence interval__
 
-<IMG SRC="./PPT_IMG/TOC_Image_TimeSeries-1.png" ALT="TOC_Image_TimeSeries-1">
+<IMG SRC="https://github.com/kristinepetrosyan/Capstone_FlatironSchool/blob/main/timeseries.png">
 
 __Model Evaluation Scores__
 - Mean squared error: 211.47669613545847
@@ -145,16 +146,17 @@ __Model Evaluation Scores__
 
 __Performing Predictons in the future__
 
-<IMG SRC="">
-
+<IMG SRC="https://github.com/kristinepetrosyan/Capstone_FlatironSchool/blob/main/timeseries2.png">
+ 
 - RMSE value ≥0.5 reflects the poor ability of the model to accurately predict the data, in this case RMSE: 14.54 from One-step Ahead Forecasting.
 - This time series has low-volume count data (less than 3 years of data); having MORE data could greatly improve the forecasting.
 
 
-## Future work/Improvements
+## Conclusion/ Future work
 
 > By exposing cancellation drivers, machine learning models can help hoteliers to better understand booking cancellation patterns and enable the adjustment of a hotel’s cancellation policies and overbooking tactics according to the characteristics of its bookings.
 Moreover, this work shows that if hotel managers had access to an application (GUI) which is included in Future works of this project then they could act on bookings with high cancellation probability and contain the associated revenue losses.  Leading to other benefits, such as, improve overbooking/cancellation policies, and have more assertive pricing and staffing allocation strategies.
 
-> Contact
+
+### Contact
 If you have any questions, you can contact me at kristinelpetrosyan@gmail.com
