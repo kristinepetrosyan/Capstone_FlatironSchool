@@ -11,6 +11,7 @@
 
 # Hotel Booking Prediction
 <IMG SRC="https://github.com/kristinepetrosyan/Capstone_FlatironSchool/blob/main/Screen%20Shot%202020-11-02%20at%205.00.49%20PM.png">
+
 ## General Info
 This project walks you through several data science concepts and tools to help you gain more insights on important features used to predict hotel booking demand.
 
